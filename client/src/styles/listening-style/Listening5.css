@@ -1,0 +1,47 @@
+/* Custom adjustments for Listening 5 layout */
+.listening-light-theme .notes-container h4 {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    color: var(--l-primary);
+    border-bottom: 2px solid var(--l-primary-light);
+    display: inline-block;
+    font-size: 14px;
+}
+
+.listening-light-theme .matching-container {
+    background: #f8fafc;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid var(--l-border);
+}
+
+.listening-light-theme .options-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.listening-light-theme .opt-label {
+    background: white;
+    padding: 10px;
+    border: 1px solid var(--l-border);
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.listening-light-theme .map-q-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 400px;
+    margin-bottom: 8px;
+}
+
+.listening-light-theme .blank-input.small {
+    width: 45px;
+    text-align: center;
+    border-bottom: 2px solid var(--l-primary);
+    text-transform: uppercase;
+}

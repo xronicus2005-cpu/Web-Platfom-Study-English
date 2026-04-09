@@ -1,0 +1,70 @@
+/* Reusing core styles and adding table/map specifics */
+.listening-light-theme .listening-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.listening-light-theme .listening-table th, 
+.listening-light-theme .listening-table td {
+    border: 1px solid var(--l-border);
+    padding: 12px;
+    font-size: 13px;
+    text-align: left;
+}
+
+.listening-light-theme .map-placeholder {
+    width: 500px;
+    background: #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    border: 2px dashed #94a3b8;
+    font-weight: bold;
+    color: #475569;
+}
+
+.listening-light-theme .matching-container, 
+.listening-light-theme .matching-grid {
+    background: #f8fafc;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid var(--l-border);
+}
+
+.listening-light-theme .options-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.listening-light-theme .opt-label {
+    background: white;
+    padding: 10px;
+    border: 1px solid var(--l-border);
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.listening-light-theme .map-q-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 450px;
+    margin-bottom: 10px;
+}
+
+.listening-light-theme .blank-input.small {
+    width: 45px;
+    text-align: center;
+    border-bottom: 2px solid var(--l-primary);
+    text-transform: uppercase;
+}
+
+.map-photo{
+    width: 100%;
+}

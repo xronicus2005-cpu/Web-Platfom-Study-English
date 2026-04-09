@@ -1,0 +1,37 @@
+/* Specialized styling for matching grids and lists */
+.listening-light-theme .matching-container {
+    background: #f8fafc;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid var(--l-border);
+}
+
+.listening-light-theme .options-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.listening-light-theme .opt-label {
+    background: white;
+    padding: 8px;
+    border: 1px solid var(--l-border);
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.listening-light-theme .map-q-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 400px;
+    margin-bottom: 8px;
+}
+
+.listening-light-theme .blank-input.small {
+    width: 40px;
+    text-align: center;
+    text-transform: uppercase;
+}

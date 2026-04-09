@@ -1,0 +1,70 @@
+/* Specialized Flowchart and Table styles */
+.listening-light-theme .listening-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.listening-light-theme .listening-table th, 
+.listening-light-theme .listening-table td {
+    border: 1px solid var(--l-border);
+    padding: 12px;
+    font-size: 13px;
+    text-align: left;
+}
+
+.listening-light-theme .listening-table th {
+    background: var(--l-primary-light);
+    color: var(--l-primary);
+}
+
+.listening-light-theme .flowchart-container {
+    padding: 25px;
+    background: #f8fafc;
+    border-radius: 12px;
+    border: 1px solid var(--l-border);
+    text-align: center;
+}
+
+.listening-light-theme .flow-step {
+    padding: 12px;
+    background: white;
+    border: 1px solid var(--l-border);
+    border-radius: 8px;
+    display: inline-block;
+    max-width: 80%;
+    margin: 8px 0;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.listening-light-theme .flow-arrow {
+    font-size: 20px;
+    color: var(--l-primary);
+    font-weight: bold;
+    margin: 5px 0;
+}
+
+.listening-light-theme .options-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.listening-light-theme .opt-label {
+    background: white;
+    padding: 10px;
+    border: 1px solid var(--l-border);
+    border-radius: 8px;
+    font-size: 12px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.listening-light-theme .blank-input.small {
+    width: 45px;
+    text-align: center;
+    border-bottom: 2px solid var(--l-primary);
+    text-transform: uppercase;
+}

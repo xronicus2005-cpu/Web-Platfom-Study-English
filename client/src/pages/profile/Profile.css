@@ -1,0 +1,17 @@
+.profile-layout{
+  height:100vh;
+  display:flex;
+  flex-direction:column;
+  background:var(--color-bg);
+}
+
+.profile-body{
+  display:flex;
+  flex:1;
+}
+
+.profile-content{
+  flex:1;
+  padding:var(--space-lg);
+  overflow:auto;
+}

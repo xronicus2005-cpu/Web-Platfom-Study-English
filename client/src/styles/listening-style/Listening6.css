@@ -1,0 +1,65 @@
+/* Inherit base styles from Listening5, add flowchart specific ones */
+
+.listening-light-theme .flowchart-container {
+    padding: 20px;
+    background: #f8fafc;
+    border-radius: 12px;
+    border: 1px solid var(--l-border);
+    text-align: center;
+}
+
+.listening-light-theme .flow-step {
+    padding: 10px;
+    background: white;
+    border: 1px solid var(--l-border);
+    border-radius: 8px;
+    display: inline-block;
+    font-size: 13px;
+    margin: 5px 0;
+}
+
+.listening-light-theme .flow-arrow {
+    font-size: 20px;
+    color: var(--l-primary);
+    font-weight: bold;
+}
+
+.listening-light-theme .matching-container {
+    background: #f8fafc;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid var(--l-border);
+}
+
+.listening-light-theme .options-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.listening-light-theme .opt-label {
+    background: white;
+    padding: 10px;
+    border: 1px solid var(--l-border);
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    text-align: left;
+}
+
+.listening-light-theme .map-q-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 450px;
+    margin-bottom: 8px;
+    font-size: 13px;
+}
+
+.listening-light-theme .blank-input.small {
+    width: 45px;
+    text-align: center;
+    border-bottom: 2px solid var(--l-primary);
+    text-transform: uppercase;
+}

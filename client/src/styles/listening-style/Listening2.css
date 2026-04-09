@@ -1,0 +1,18 @@
+/* Add this to your Listening2.css if not present */
+.listening-light-theme input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.listening-light-theme .mcq-item label {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.listening-light-theme .mcq-item label:hover {
+    background: var(--l-primary-light);
+}

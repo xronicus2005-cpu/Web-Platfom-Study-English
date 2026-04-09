@@ -1,0 +1,75 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  /* --- Background & Surfaces --- */
+  --color-bg: #0b0f1a;           /* Eng orqa fon (Deep Space) */
+  --color-surface: #161b2c;      /* Kartochkalar va qismlar foni */
+  --color-surface-hover: #1f263d; /* Elementlar ustiga borgandagi rang */
+  --color-border: rgba(255, 255, 255, 0.08); /* Nozik chegaralar */
+
+  /* --- Brand & Neon Accents --- */
+  --color-primary: #6366f1;       /* Indigo (Asosiy rang) */
+  --color-primary-glow: rgba(99, 102, 241, 0.4); 
+  --color-neon: #22d3ee;          /* Cyan (Neon urg'u beruvchi rang) */
+  --color-neon-glow: rgba(34, 211, 238, 0.3);
+
+  /* --- Text Palette --- */
+  --color-text-primary: #f8fafc;   /* Asosiy oq matn */
+  --color-text-secondary: #94a3b8; /* Ikkinchi darajali (kulrangroq) matn */
+  --color-text-muted: #64748b;     /* Passiv matnlar uchun */
+
+  /* --- Glassmorphism --- */
+  --glass-bg: rgba(22, 27, 44, 0.7);
+  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-blur: blur(16px);
+
+  /* --- Status Colors --- */
+  --color-success: #10b981;       /* Yashil */
+  --color-error: #f43f5e;         /* Qizil (Logout va xatolar uchun) */
+  --color-warning: #f59e0b;       /* Sariq */
+
+  /* --- Buttons --- */
+  --btn-dark: #0f172a;
+  --btn-primary: var(--color-primary);
+  --btn-hover: #4f46e5;
+
+  /* --- Shadows & Glows --- */
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.4);
+  --shadow-neon: 0 0 15px var(--color-neon-glow);
+
+  /* --- Border Radius --- */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 30px;
+
+  /* --- Transitions --- */
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* ... your existing variables ... */
+  --color-neon: #00f2ff;
+  --color-neon-glow: rgba(0, 242, 255, 0.3);
+}
+
+@keyframes pulse-glow {
+  0% { box-shadow: 0 0 5px var(--color-neon-glow); }
+  50% { box-shadow: 0 0 20px var(--color-neon-glow); }
+  100% { box-shadow: 0 0 5px var(--color-neon-glow); }
+}
+
+body{
+  background-color: var(--color-bg);
+}
+
+body {
+  background-color: var(--color-bg);
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.05) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(34, 211, 238, 0.05) 0%, transparent 40%);
+  min-height: 100vh;
+}

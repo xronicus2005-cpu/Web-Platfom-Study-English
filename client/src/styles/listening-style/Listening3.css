@@ -1,0 +1,54 @@
+/* TABLE STYLES FOR PART 3 */
+.listening-light-theme .listening-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 13px;
+}
+
+.listening-light-theme .listening-table th {
+    background: var(--l-primary-light);
+    color: var(--l-primary);
+    text-align: left;
+    padding: 12px;
+    border: 1px solid var(--l-border);
+}
+
+.listening-light-theme .listening-table td {
+    padding: 15px;
+    border: 1px solid var(--l-border);
+    vertical-align: middle;
+    color: #475569;
+}
+
+/* MATCHING OPTIONS GRID */
+.listening-light-theme .matching-container {
+    padding: 20px;
+    background: #f8fafc;
+    border-radius: 10px;
+    border: 1px solid var(--l-border);
+}
+
+.listening-light-theme .options-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 25px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.listening-light-theme .opt-label {
+    background: white;
+    padding: 8px 12px;
+    border: 1px solid var(--l-border);
+    border-radius: 6px;
+}
+
+/* INPUT ADJUSTMENTS */
+.listening-light-theme .blank-input.small {
+    width: 45px;
+    text-align: center;
+    border-bottom: 2px solid var(--l-primary);
+    text-transform: uppercase;
+}

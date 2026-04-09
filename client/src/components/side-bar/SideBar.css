@@ -1,0 +1,189 @@
+.sidebar {
+  width: 280px; /* Biroz kengroq, qulayroq */
+  height: 100vh;
+  padding: 32px 20px;
+  background: var(--color-bg);
+  border-right: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+  transition: var(--transition-normal);
+}
+
+/* Brand Section */
+.sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0 10px 40px 10px;
+}
+
+.brand-icon {
+  width: 40px;
+  height: 40px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-neon);
+}
+
+.brand-name {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--color-text-primary);
+  letter-spacing: -1px;
+}
+
+.si-de-logo{
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.brand-dot-side{
+  color: var(--color-neon);
+  width: 12px;
+  height: 12px;
+  background: var(--dash-neon);
+  border-radius: 50%;
+  box-shadow: 0 0 15px var(--dash-neon);
+}
+
+/* Nav Label */
+.nav-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--color-text-muted);
+  font-weight: 700;
+  margin-bottom: 15px;
+  padding-left: 14px;
+}
+
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex: 1;
+}
+
+/* Nav Items */
+.nav-item {
+  text-decoration: none;
+  color: var(--color-text-secondary);
+  padding: 14px 16px;
+  border-radius: var(--radius-md);
+  font-size: 15px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  position: relative;
+  transition: all var(--transition-fast);
+  overflow: hidden;
+}
+
+.nav-icon {
+  transition: transform 0.3s ease;
+}
+
+/* Hover */
+.nav-item:hover {
+  background: var(--color-surface);
+  color: var(--color-text-primary);
+  padding-left: 20px; /* Kichik siljish effekti */
+}
+
+.nav-item:hover .nav-icon {
+  transform: scale(1.1);
+  color: var(--color-neon);
+}
+
+/* Active State - Eng asosiysi */
+.nav-item.active {
+  background: var(--color-primary); /* Indigo rang */
+  color: #ffffff;
+  box-shadow: 0 10px 20px -5px var(--color-primary-glow);
+}
+
+.nav-item.active .nav-icon {
+  color: #ffffff;
+}
+
+/* Neon Indicator (Active holatida yon tomonda yonadigan chiziq) */
+.nav-item.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 20%;
+  height: 60%;
+  width: 4px;
+  background: var(--color-neon);
+  border-radius: 0 4px 4px 0;
+  box-shadow: 0 0 10px var(--color-neon);
+}
+
+/* Hoverda paydo bo'ladigan ichki nur */
+.active-glow {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, rgba(255,255,255,0.15) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.nav-item.active .active-glow {
+  opacity: 1;
+}
+
+/* Sidebar Footer Banner */
+.sidebar-footer {
+  margin-top: auto;
+  padding-top: 20px;
+}
+
+.pro-box {
+  background: linear-gradient(135deg, var(--color-surface), var(--color-bg));
+  border: 1px solid var(--color-border);
+  padding: 20px;
+  border-radius: var(--radius-lg);
+  text-align: center;
+}
+
+.pro-box p {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin-bottom: 4px;
+}
+
+.pro-box small {
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+/* Mobile Responsive */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 80px;
+    padding: 30px 15px;
+    align-items: center;
+  }
+  
+  .brand-name, .nav-label, .nav-item span, .pro-box {
+    display: none;
+  }
+  
+  .sidebar-brand {
+    padding-bottom: 30px;
+  }
+  
+  .nav-item {
+    justify-content: center;
+    padding: 14px;
+  }
+}

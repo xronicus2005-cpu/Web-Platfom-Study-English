@@ -1,0 +1,388 @@
+.listening-light-theme {
+  --l-bg: #f3f6f9;
+  --l-surface: #ffffff;
+  --l-primary: #6366f1;
+  --l-primary-light: #eef2ff;
+  --l-text-main: #1e293b;
+  --l-text-sub: #64748b;
+  --l-border: #e2e8f0;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  font-family: 'Inter', -apple-system, sans-serif;
+  color: var(--l-text-main);
+  background-color: var(--l-bg);
+  position: relative;
+}
+
+.listening-light-theme .full-viewport-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* HEADER */
+.listening-light-theme .test-header {
+  width: 100%;
+  background: var(--l-surface);
+  border-bottom: 1px solid var(--l-border);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 12px 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+}
+
+.listening-light-theme .header-flex-container {
+  width: 95%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.listening-light-theme .timer-badge {
+  background: var(--l-primary);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 10px;
+  font-weight: 800;
+  font-size: 16px;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.listening-light-theme .custom-compact-player {
+  height: 34px;
+  width: 280px;
+  border-radius: 50px;
+}
+
+.listening-light-theme .finish-btn {
+  background: var(--l-primary);
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* NAVIGATION */
+.listening-light-theme .part-navigation-bar {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px 0;
+}
+
+.listening-light-theme .part-link {
+  background: var(--l-surface);
+  border: 1px solid var(--l-border);
+  padding: 8px 30px;
+  border-radius: 12px;
+  font-weight: 600;
+  color: var(--l-text-sub);
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.listening-light-theme .part-link.active {
+  background: var(--l-primary);
+  color: white;
+  border-color: var(--l-primary);
+}
+
+/* PAPER CONTAINER */
+.listening-light-theme .main-content-area {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
+}
+
+.listening-light-theme .paper-container {
+  width: 90%;
+  max-width: 1200px;
+  background: var(--l-surface);
+  min-height: 80vh;
+  border-radius: 15px;
+  padding: 45px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+  border: 1px solid var(--l-border);
+}
+
+/* INSTRUCTIONS BOX */
+.listening-light-theme .instructions-box {
+  background: var(--l-primary-light);
+  border-radius: 12px;
+  margin-bottom: 30px;
+  overflow: hidden;
+  border: 1px solid rgba(99, 102, 241, 0.1);
+}
+
+.listening-light-theme .ins-header {
+  background: var(--l-primary);
+  color: white;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.listening-light-theme .ins-body {
+  padding: 18px 20px;
+  font-size: 13px;
+  color: #334155;
+  line-height: 1.6;
+}
+
+.listening-light-theme .section-title {
+  font-size: 20px;
+  color: var(--l-primary);
+  text-align: center;
+  margin: 25px 0;
+}
+
+.listening-light-theme ul {
+  list-style: disc; /* Re-enabled dots as requested previously */
+  padding-left: 20px;
+}
+
+.listening-light-theme li {
+  font-size: 12px;
+  margin-bottom: 10px;
+  color: #475569;
+}
+
+.listening-light-theme .blank-input {
+  border: none;
+  border-bottom: 2px solid #cbd5e1;
+  background: #f8fafc;
+  padding: 2px 8px;
+  width: 130px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--l-primary);
+  border-radius: 4px;
+}
+
+/* Checking Colors */
+.listening-light-theme .blank-input.correct-ans {
+    background-color: #dcfce7 !important;
+    border-bottom: 2px solid #22c55e !important;
+    color: #166534 !important;
+}
+
+.listening-light-theme .blank-input.wrong-ans {
+    background-color: #fee2e2 !important;
+    border-bottom: 2px solid #ef4444 !important;
+    color: #991b1b !important;
+}
+
+.listening-light-theme .highlight-tooltip {
+  display: flex;
+  gap: 8px;
+  background: white;
+  padding: 6px 10px;
+  border-radius: 50px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  border: 1px solid #ddd;
+  z-index: 2000;
+}
+
+.listening-light-theme .h-btn {
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 2px solid white;
+  cursor: pointer;
+}
+
+.listening-light-theme .h-btn.red { background: #ff4d4d !important; }
+.listening-light-theme .h-btn.yel { background: #ffd43b !important; }
+.listening-light-theme .h-btn.blu { background: #339af0 !important; }
+
+.listening-light-theme .highlighted-text {
+  border-radius: 3px;
+  padding: 1px 0;
+}
+
+.listening-light-theme .mcq-item {
+  margin-bottom: 25px;
+  padding: 15px;
+  border-bottom: 1px solid var(--l-border);
+}
+
+.listening-light-theme .mcq-item p {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.listening-light-theme .map-placeholder {
+  width: 450px;
+  background: #f1f5f9;
+  border: 2px dashed #cbd5e1;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.listening-light-theme .map-q-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 400px;
+  margin-bottom: 10px;
+}
+
+.listening-light-theme .blank-input.small {
+  width: 40px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* Listening1.css */
+.listening-light-theme {
+  --l-bg: #f8fafc;
+  --l-surface: #ffffff;
+  --l-primary: #6366f1;
+  --l-primary-light: #f1f5ff;
+  --l-text-main: #334155;
+  --l-text-sub: #64748b;
+  --l-border: #e2e8f0;
+  
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  font-family: 'Inter', -apple-system, sans-serif;
+  color: var(--l-text-main);
+  background-color: var(--l-bg);
+  line-height: 1.5;
+}
+
+/* Scrollbar styling for better experience */
+.listening-light-theme ::-webkit-scrollbar {
+  width: 8px;
+}
+.listening-light-theme ::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+.listening-light-theme ::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 10px;
+}
+
+.listening-light-theme .paper-container {
+  width: 90%;
+  max-width: 900px; /* Narrower width is easier for eye-tracking */
+  background: var(--l-surface);
+  margin-top: 20px;
+  border-radius: 12px;
+  padding: 40px 60px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+  border: 1px solid var(--l-border);
+}
+
+/* SECTION TITLES & HEADERS */
+.listening-light-theme .section-title {
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #1e293b;
+  text-align: center;
+  margin: 30px 0 20px 0;
+  font-weight: 800;
+}
+
+/* Beautiful & Compact H4 Sub-headers */
+.listening-light-theme .notes-container h4 {
+  font-size: 13px;
+  text-transform: uppercase;
+  color: var(--l-primary);
+  border-bottom: 2px solid var(--l-primary-light);
+  padding-bottom: 5px;
+  margin: 25px 0 15px 0;
+  display: inline-block;
+  font-weight: 700;
+}
+
+.listening-light-theme .notes-container p {
+  font-size: 12px;
+  color: var(--l-text-sub);
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+/* QUESTIONS LIST */
+.listening-light-theme ul {
+  list-style: disc;
+  padding-left: 0;
+}
+
+.listening-light-theme li {
+  font-size: 13px; /* Slightly larger for readability than 12px, but compact */
+  margin-bottom: 12px;
+  color: #475569;
+
+  display: list-item;
+  line-height: 1.6;
+}
+
+/* INPUT STYLING */
+.listening-light-theme .blank-input {
+  border: none;
+  border-bottom: 1.5px solid #cbd5e1;
+  background: #fdfdfd;
+  padding: 0 5px;
+  width: 140px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #4f46e5;
+  transition: all 0.2s ease;
+
+  display: inline-block;
+  vertical-align: baseline;
+  margin: 0 4px;
+}
+
+.listening-light-theme .blank-input:focus {
+  outline: none;
+  border-bottom-color: var(--l-primary);
+  background: var(--l-primary-light);
+}
+
+/* MCQ SPACING */
+.listening-light-theme .mcq-item {
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  transition: background 0.2s;
+}
+
+.listening-light-theme .mcq-item:hover {
+  background: #f8fafc;
+  border-color: #f1f5f9;
+}
+
+.listening-light-theme .mcq-item p {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1e293b;
+  margin-bottom: 10px;
+  font-style: normal;
+}
+
+.listening-light-theme .mcq-item label {
+  font-size: 13px;
+  color: #475569;
+  padding: 4px 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Rest of your existing styles (Header, Navigation, etc.) stay the same... */

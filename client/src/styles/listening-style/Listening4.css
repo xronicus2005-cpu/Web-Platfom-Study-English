@@ -1,0 +1,66 @@
+/* Inherit from your Listening1-3 styles, adding/overriding specific needs */
+
+.listening-light-theme .listening-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.listening-light-theme .listening-table th, 
+.listening-light-theme .listening-table td {
+    border: 1px solid var(--l-border);
+    padding: 12px;
+    font-size: 13px;
+}
+
+.listening-light-theme .listening-table th {
+    background: var(--l-primary-light);
+    color: var(--l-primary);
+}
+
+.listening-light-theme .matching-container {
+    background: #f8fafc;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid var(--l-border);
+}
+
+.listening-light-theme .options-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.listening-light-theme .opt-label {
+    background: white;
+    padding: 8px;
+    font-size: 12px;
+    border: 1px solid var(--l-border);
+    border-radius: 6px;
+    font-weight: 600;
+}
+
+.listening-light-theme .map-q-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 450px;
+    margin-bottom: 10px;
+    font-size: 13px;
+}
+
+.listening-light-theme .blank-input.small {
+    width: 45px;
+    text-align: center;
+    border-bottom: 2px solid var(--l-primary);
+}
+
+.listening-light-theme .mcq-item label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px;
+    cursor: pointer;
+    font-size: 13px;
+}

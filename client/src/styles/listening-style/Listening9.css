@@ -1,0 +1,73 @@
+/* Reusing core IELTS Listening styles with specific adjustments */
+.listening-light-theme .listening-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+.listening-light-theme .listening-table th, 
+.listening-light-theme .listening-table td {
+    border: 1px solid var(--l-border);
+    padding: 12px;
+    font-size: 13px;
+    text-align: left;
+}
+
+.listening-light-theme .map-placeholder {
+    width: 500px;
+    
+    background: #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    border: 2px dashed #94a3b8;
+    font-weight: bold;
+}
+
+.listening-light-theme .flowchart-container {
+    padding: 20px;
+    background: #f8fafc;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.listening-light-theme .flow-step {
+    padding: 10px;
+    background: white;
+    border: 1px solid var(--l-border);
+    border-radius: 8px;
+    display: inline-block;
+    font-size: 13px;
+    margin: 5px 0;
+}
+
+.listening-light-theme .options-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.listening-light-theme .opt-label {
+    background: white;
+    padding: 8px;
+    border: 1px solid var(--l-border);
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.listening-light-theme .map-q-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 13px;
+}
+
+.listening-light-theme .blank-input.small {
+    width: 40px;
+    text-align: center;
+    text-transform: uppercase;
+}

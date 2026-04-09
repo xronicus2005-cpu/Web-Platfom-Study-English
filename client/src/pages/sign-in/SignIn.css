@@ -1,0 +1,202 @@
+.signin-page {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg);
+  position: relative;
+  overflow: hidden;
+  padding: 20px;
+}
+
+/* --- Fon effektlari --- */
+.signin-glow-1, .signin-glow-2 {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  filter: blur(120px);
+  z-index: 0;
+  opacity: 0.15;
+}
+
+.signin-glow-1 {
+  top: -100px;
+  right: -100px;
+  background: var(--color-primary);
+}
+
+.signin-glow-2 {
+  bottom: -100px;
+  left: -100px;
+  background: var(--color-neon);
+}
+
+/* --- Card Styling --- */
+.signin-container {
+  width: 100%;
+  max-width: 450px;
+  position: relative;
+  z-index: 10;
+}
+
+.signin-card {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-2xl);
+  padding: 50px 40px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.signin-header {
+  text-align: center;
+}
+
+.signin-icon-box {
+  width: 60px;
+  height: 60px;
+  background: var(--color-neon-glow);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  border: 1px solid rgba(34, 211, 238, 0.2);
+}
+
+.neon-icon {
+  color: var(--color-neon);
+  filter: drop-shadow(0 0 5px var(--color-neon));
+}
+
+.signin-title {
+  font-size: 32px;
+  font-weight: 900;
+  color: var(--color-neon);
+  margin-bottom: 8px;
+  letter-spacing: -1px;
+}
+
+.signin-title span { color: var(--color-neon); }
+
+.signin-subtitle {
+  font-size: 14px;
+  color: var(--color-text-muted);
+}
+
+/* --- Input Styling --- */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-icon {
+  position: absolute;
+  left: 16px;
+  color: var(--color-text-muted);
+  transition: 0.3s;
+}
+
+.input-wrapper input {
+  width: 100%;
+  padding: 16px 16px 16px 48px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  color: var(--color-primary);
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.input-wrapper input:focus {
+  outline: none;
+  border-color: var(--color-neon);
+  background: rgba(34, 211, 238, 0.05);
+  box-shadow: 0 0 15px var(--color-neon-glow);
+}
+
+.input-wrapper input:focus + .input-icon {
+  color: var(--color-neon);
+}
+
+/* --- Button Styling --- */
+.signin-btn {
+  width: 100%;
+  padding: 16px;
+  background: var(--btn-hover);
+  color: #fff;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.signin-btn:hover {
+  background: var(--color-neon);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px var(--color-neon-glow);
+}
+
+/* --- Footer Link --- */
+.signin-footer {
+  text-align: center;
+  font-size: 14px;
+  color: var(--color-text-muted);
+}
+
+.create-link {
+  display: inline-block;
+  margin-top: 8px;
+  color: var(--color-text-muted);
+  font-weight: 700;
+  text-decoration: none;
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.create-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: var(--color-neon);
+  transform: scaleX(0);
+  transition: 0.3s;
+  transform-origin: right;
+}
+
+.create-link:hover {
+  color: var(--color-neon);
+}
+
+.create-link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .signin-card {
+    padding: 40px 25px;
+  }
+}
