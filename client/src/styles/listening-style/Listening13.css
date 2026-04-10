@@ -1,0 +1,56 @@
+/* Specialized styling for forms and matching */
+.listening-light-theme .form-container {
+    background: #fff;
+    padding: 25px;
+    border: 2px solid #e2e8f0;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.listening-light-theme .form-row {
+    margin: 15px 0;
+    font-size: 15px;
+}
+
+.listening-light-theme .form-row .label {
+    font-weight: 700;
+    min-width: 150px;
+    display: inline-block;
+}
+
+.listening-light-theme .matching-container {
+    background: #f8fafc;
+    padding: 20px;
+    border: 1px solid var(--l-border);
+    border-radius: 8px;
+}
+
+.listening-light-theme .options-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.listening-light-theme .opt-label {
+    background: white;
+    padding: 10px;
+    border: 1px solid var(--l-border);
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.listening-light-theme .map-q-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 450px;
+    margin-bottom: 10px;
+}
+
+.listening-light-theme .blank-input.small {
+    width: 45px;
+    text-align: center;
+    text-transform: uppercase;
+}

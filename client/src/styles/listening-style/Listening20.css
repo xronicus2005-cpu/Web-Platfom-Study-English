@@ -1,0 +1,46 @@
+.listening-light-theme .map-image-placeholder {
+    width: 500px;
+
+    background: #e5e7eb;
+    border: 2px dashed #9ca3af;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    color: #4b5563;
+    font-style: italic;
+}
+
+.listening-light-theme .matching-container {
+    background: #f9fafb;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #d1d5db;
+}
+
+.listening-light-theme .options-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.listening-light-theme .opt-label {
+    background: white;
+    padding: 10px;
+    border: 1px solid #9ca3af;
+    text-align: center;
+    font-size: 14px;
+}
+
+.listening-light-theme .map-q-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.listening-light-theme .blank-input.small {
+    width: 45px;
+    text-align: center;
+}

@@ -41,6 +41,32 @@ const courses = [
       { id: 4, title: "Test 4", code: "E13T4" },
     ],
     description: "Full IELTS listening simulation with 40 questions.",
+  },
+
+  {
+    id: 4,
+    title: "IELTS 14",
+    type: "Academic",
+    tests: [
+      { id: 1, title: "Test 1", code: "E14T1" },
+      { id: 2, title: "Test 2", code: "E14T2" },
+      { id: 3, title: "Test 3", code: "E14T3" },
+      { id: 4, title: "Test 4", code: "E14T4" },
+    ],
+    description: "Full IELTS listening simulation with 40 questions.",
+  },
+
+    {
+    id: 5,
+    title: "IELTS 15",
+    type: "Academic",
+    tests: [
+      { id: 1, title: "Test 1", code: "E15T1" },
+      { id: 2, title: "Test 2", code: "E15T2" },
+      { id: 3, title: "Test 3", code: "E15T3" },
+      { id: 4, title: "Test 4", code: "E15T4" },
+    ],
+    description: "Full IELTS listening simulation with 40 questions.",
   }
 ];
 
@@ -49,8 +75,8 @@ const Listenings = () => {
   const [resultsMap, setResultsMap] = useState({});
   const navigate = useNavigate();
 
-  
-  
+
+
 
     const getResults = async () => {
     try {
@@ -98,7 +124,7 @@ const Listenings = () => {
 
         return (
           <div key={course.id} className={`course-card ${courseOpen ? "open" : ""}`}>
-            
+
             {/* Course Header */}
             <div className="course-header" onClick={() => toggleCourse(course.id)}>
               <div className="course-info-group">

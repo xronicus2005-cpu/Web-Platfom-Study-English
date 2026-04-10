@@ -1,0 +1,61 @@
+/* Custom Styles for Forms and Maps */
+.listening-light-theme .form-container {
+    background: #ffffff;
+    padding: 20px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.listening-light-theme .form-row {
+    margin: 12px 0;
+    font-size: 15px;
+}
+
+.listening-light-theme .form-row .label {
+    font-weight: 600;
+    min-width: 160px;
+    display: inline-block;
+}
+
+.listening-light-theme .map-q-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 450px;
+    padding: 10px;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.listening-light-theme .image-description-box {
+    background: #f3f4f6;
+    border: 2px dashed #9ca3af;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-style: italic;
+    color: #4b5563;
+    width: 500px;
+}
+
+.listening-light-theme .matching-container {
+    background: #f9fafb;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #e5e7eb;
+}
+
+.listening-light-theme .options-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.listening-light-theme .opt-label {
+    background: white;
+    padding: 8px;
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    font-size: 12px;
+}
