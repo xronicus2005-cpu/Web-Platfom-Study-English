@@ -12,6 +12,8 @@ const Listening2 = () => {
   const [time, setTime] = useState(0);
   const [answers, setAnswers] = useState({});
   const [isFinished, setIsFinished] = useState(false);
+  
+  ///for highlit
   const [highlightPopup, setHighlightPopup] = useState({ visible: false, x: 0, y: 0, range: null });
   
   const audioRef = useRef(null);
@@ -29,6 +31,7 @@ const Listening2 = () => {
     36: "screen", 37: "rubber", 38: "curved", 39: "curtains", 40: "international"
   };
 
+  //setting time according to audio file
   const handleMetadata = () => {
     if (audioRef.current) setTime(Math.floor(audioRef.current.duration));
   };
@@ -113,16 +116,19 @@ const Listening2 = () => {
             </div>
             <h2 className="section-title">Enquiry about joining Youth Council</h2>
             <div className="notes-container">
-                <p>Example Name: Roger | Age: 18</p>
+                <p>Example Name: Roger </p>
+                
+                
                 <ul>
+                    <li>Age: 18</li>
                     <li>Currently staying in a <input type="text" className="blank-input" value={getInputValue(1)} onChange={(e)=>handleInputChange(1, e.target.value)} placeholder="1" /> during the week</li>
                     <li>Postal address: 17, <input type="text" className="blank-input" value={getInputValue(2)} onChange={(e)=>handleInputChange(2, e.target.value)} placeholder="2" /> Street, Stamford, Lincs</li>
                     <li>Postcode: <input type="text" className="blank-input" value={getInputValue(3)} onChange={(e)=>handleInputChange(3, e.target.value)} placeholder="3" /></li>
                     <li>Occupation: student and part-time job as a <input type="text" className="blank-input" value={getInputValue(4)} onChange={(e)=>handleInputChange(4, e.target.value)} placeholder="4" /></li>
                     <li>Studying <input type="text" className="blank-input" value={getInputValue(5)} onChange={(e)=>handleInputChange(5, e.target.value)} placeholder="5" /> (major subject) and history</li>
                     <li>Hobbies: does a lot of <input type="text" className="blank-input" value={getInputValue(6)} onChange={(e)=>handleInputChange(6, e.target.value)} placeholder="6" />, and is interested in the <input type="text" className="blank-input" value={getInputValue(7)} onChange={(e)=>handleInputChange(7, e.target.value)} placeholder="7" /></li>
-                    <li>Wants to work with young people who are <input type="text" className="blank-input" value={getInputValue(8)} onChange={(e)=>handleInputChange(8, e.target.value)} placeholder="8" /></li>
-                    <li>Talk to Elections Officer next Monday at <input type="text" className="blank-input" value={getInputValue(9)} onChange={(e)=>handleInputChange(9, e.target.value)} placeholder="9" /> pm</li>
+                    <li>On Youth Council, wants to work with young people who are <input type="text" className="blank-input" value={getInputValue(8)} onChange={(e)=>handleInputChange(8, e.target.value)} placeholder="8" /></li>
+                    <li>Will come to talk to Elections Officer next Monday at <input type="text" className="blank-input" value={getInputValue(9)} onChange={(e)=>handleInputChange(9, e.target.value)} placeholder="9" /> pm</li>
                     <li>Mobile number: <input type="text" className="blank-input" value={getInputValue(10)} onChange={(e)=>handleInputChange(10, e.target.value)} placeholder="10" /></li>
                 </ul>
             </div>
@@ -137,14 +143,14 @@ const Listening2 = () => {
             </div>
             
             <div className="mcq-item">
-                <p>11-12. Which TWO changes have been made so far during the refurbishment?</p>
+                <p>11-12. Which TWO changes have been made so far during the refurbishment of the theatre?</p>
                 {['A. Some rooms now have a different use.', 'B. A different type of seating has been installed.', 'C. An elevator has been installed.', 'D. The outside of the building has been repaired.', 'E. Extra seats have been added.'].map(opt => (
                     <label key={opt}><input type="checkbox" checked={isSelected(11, 12, opt[0])} onChange={()=>handleMultiSelect(11, 12, opt[0])} /> {opt}</label>
                 ))}
             </div>
 
             <div className="mcq-item">
-                <p>13-14. Which TWO facilities does the theatre currently offer?</p>
+                <p>13-14. Which TWO facilities does the theatre currently offer to the public?</p>
                 {['A. rooms for hire', 'B. backstage tours', 'C. hire of costumes', 'D. a bookshop', 'E. a café'].map(opt => (
                     <label key={opt}><input type="checkbox" checked={isSelected(13, 14, opt[0])} onChange={()=>handleMultiSelect(13, 14, opt[0])} /> {opt}</label>
                 ))}
@@ -200,28 +206,43 @@ const Listening2 = () => {
                     <label><input type="radio" name="q22" checked={answers[22] === 'C'} onChange={()=>handleInputChange(22, 'C')} /> C. a ruler</label>
                   </div>
                   <div className="mcq-item">
-                    <p>23. Colin suggests a change in Helen's procedure regarding:</p>
-                    <label><input type="radio" name="q23" checked={answers[23] === 'A'} onChange={()=>handleInputChange(23, 'A')} /> A. the order of information.</label><br/>
-                    <label><input type="radio" name="q23" checked={answers[23] === 'B'} onChange={()=>handleInputChange(23, 'B')} /> B. the way information is divided.</label><br/>
+                    <p>23. In Helen's procedure section, Colin suggests a change in:</p>
+                    <label><input type="radio" name="q23" checked={answers[23] === 'A'} onChange={()=>handleInputChange(23, 'A')} /> A. the order in which information is given.</label><br/>
+                    <label><input type="radio" name="q23" checked={answers[23] === 'B'} onChange={()=>handleInputChange(23, 'B')} /> B. the way information is divided up.</label><br/>
                     <label><input type="radio" name="q23" checked={answers[23] === 'C'} onChange={()=>handleInputChange(23, 'C')} /> C. the amount of information provided.</label>
                   </div>
                   {/* ... Question 24-26 simplified for length ... */}
                   <div className="mcq-item">
-                    <p>24. What do they say about the wave speed measurement method?</p>
-                    <label><input type="radio" name="q24" checked={answers[24] === 'A'} onChange={()=>handleInputChange(24, 'A')} /> A. Accurate results</label><br/>
-                    <label><input type="radio" name="q24" checked={answers[24] === 'B'} onChange={()=>handleInputChange(24, 'B')} /> B. Simple to carry out</label>
+                    <p>24. What do they say about the method they used to measure wave speed?</p>
+                    <label><input type="radio" name="q24" checked={answers[24] === 'A'} onChange={()=>handleInputChange(24, 'A')} /> A. It provided accurate results.</label><br/>
+                    <label><input type="radio" name="q24" checked={answers[24] === 'B'} onChange={()=>handleInputChange(24, 'B')} /> B. It was simple to carry out.</label><br/>
+                    <label><input type="radio" name="q24" checked={answers[24] === 'C'} onChange={()=>handleInputChange(24, 'C')} /> C. It required special equipment.</label>
+                  </div>
+
+                  <div className="mcq-item">
+                    <p>25. What mistake did Helen make when first drawing the map?</p>
+                    <label><input type="radio" name="q25" checked={answers[25] === 'A'} onChange={()=>handleInputChange(25, 'A')} /> A. She chose the wrong scale.</label><br/>
+                    <label><input type="radio" name="q25" checked={answers[25] === 'B'} onChange={()=>handleInputChange(25, 'B')} /> B. She stood in the wrong place.</label><br/>
+                    <label><input type="radio" name="q25" checked={answers[25] === 'C'} onChange={()=>handleInputChange(25, 'C')} /> C. She did it at the wrong time.</label>
+                  </div>
+
+                  <div className="mcq-item">
+                    <p>26. What do they decide to do next with their map?</p>
+                    <label><input type="radio" name="q26" checked={answers[26] === 'A'} onChange={()=>handleInputChange(26, 'A')} /> A.  scan it onto a computer.</label><br/>
+                    <label><input type="radio" name="q26" checked={answers[26] === 'B'} onChange={()=>handleInputChange(26, 'B')} /> B. check it using photographs.</label><br/>
+                    <label><input type="radio" name="q26" checked={answers[26] === 'C'} onChange={()=>handleInputChange(26, 'C')} /> C. add information from the internet.</label>
                   </div>
                   {/* TWO LETTERS Question 27-28 */}
                   <div className="mcq-item">
-                    <p>27-28. TWO problems affecting organisms in the splash zone:</p>
+                    <p>27-28. Which TWO problems affecting organisms in the splash zone are mentioned?</p>
                     {['A. lack of water', 'B. strong winds', 'C. lack of food', 'D. high temperatures', 'E. large waves'].map(opt => (
                         <label key={opt}><input type="checkbox" checked={isSelected(27, 28, opt[0])} onChange={()=>handleMultiSelect(27, 28, opt[0])} /> {opt}</label>
                     ))}
                   </div>
                   {/* TWO LETTERS Question 29-30 */}
                   <div className="mcq-item">
-                    <p>29-30. TWO reasons for possible error in the report:</p>
-                    {['A. inaccurate records', 'B. influence by observer', 'C. incorrect identification', 'D. small sample generalisations', 'E. missing some organisms'].map(opt => (
+                    <p>29-30. Which TWO reasons for possible error will they include in their report?</p>
+                    {['A. inaccurate records of the habitat of organisms', 'B. influence on behaviour of organisms by observer', 'C. incorrect identification of some organisms', 'D. making generalisations from a small sample', 'E. missing some organisms when counting'].map(opt => (
                         <label key={opt}><input type="checkbox" checked={isSelected(29, 30, opt[0])} onChange={()=>handleMultiSelect(29, 30, opt[0])} /> {opt}</label>
                     ))}
                   </div>
@@ -237,30 +258,33 @@ const Listening2 = () => {
             </div>
             <h2 className="section-title">DESIGNING A PUBLIC BUILDING: THE TAYLOR CONCERT HALL</h2>
             <div className="notes-container">
-                <h4>Introduction</h4>
+                <h4>Introduction: The designer of a public building may need to consider the building's </h4>
                 <ul>
-                    <li>Consider physical and <input type="text" className="blank-input" value={getInputValue(31)} onChange={(e)=>handleInputChange(31, e.target.value)} placeholder="31" /> context</li>
+                  <li>function</li>
+                  <li>physical and <input type="text" className="blank-input" value={getInputValue(31)} onChange={(e)=>handleInputChange(31, e.target.value)} placeholder="31" /> context</li>
+                  <li>symbolic meaning</li>
                 </ul>
-                <h4>Location and concept</h4>
+                <h4>Location and concept of the Concert Hall</h4>
                 <ul>
-                    <li>Site of a disused <input type="text" className="blank-input" value={getInputValue(32)} onChange={(e)=>handleInputChange(32, e.target.value)} placeholder="32" /></li>
+                    <li>On the site of a disused <input type="text" className="blank-input" value={getInputValue(32)} onChange={(e)=>handleInputChange(32, e.target.value)} placeholder="32" /></li>
                     <li>Beside a <input type="text" className="blank-input" value={getInputValue(33)} onChange={(e)=>handleInputChange(33, e.target.value)} placeholder="33" /></li>
+                    <li>The design is based on the concept of a mystery</li>
                 </ul>
                 <h4>Building design</h4>
                 <ul>
-                    <li>Approached by a <input type="text" className="blank-input" value={getInputValue(34)} onChange={(e)=>handleInputChange(34, e.target.value)} placeholder="34" /> for pedestrians</li>
-                    <li>Shape of a <input type="text" className="blank-input" value={getInputValue(35)} onChange={(e)=>handleInputChange(35, e.target.value)} placeholder="35" /></li>
-                    <li>Exterior wall acts as a large <input type="text" className="blank-input" value={getInputValue(36)} onChange={(e)=>handleInputChange(36, e.target.value)} placeholder="36" /></li>
+                    <li>It's approached by a <input type="text" className="blank-input" value={getInputValue(34)} onChange={(e)=>handleInputChange(34, e.target.value)} placeholder="34" /> for pedestrians</li>
+                    <li>The building is the shape of a <input type="text" className="blank-input" value={getInputValue(35)} onChange={(e)=>handleInputChange(35, e.target.value)} placeholder="35" /></li>
+                    <li>One exterior wall acts as a large <input type="text" className="blank-input" value={getInputValue(36)} onChange={(e)=>handleInputChange(36, e.target.value)} placeholder="36" /></li>
                 </ul>
-                <h4>In the auditorium</h4>
+                <li>In the auditorium:</li>
                 <ul>
-                    <li>Floor built on huge pads made of <input type="text" className="blank-input" value={getInputValue(37)} onChange={(e)=>handleInputChange(37, e.target.value)} placeholder="37" /></li>
-                    <li>Walls are <input type="text" className="blank-input" value={getInputValue(38)} onChange={(e)=>handleInputChange(38, e.target.value)} placeholder="38" /> in shape</li>
-                    <li>Ceiling panels and <input type="text" className="blank-input" value={getInputValue(39)} onChange={(e)=>handleInputChange(39, e.target.value)} placeholder="39" /> on walls</li>
+                    <li className="inner-li">The floor is built on huge pads made of <input type="text" className="blank-input" value={getInputValue(37)} onChange={(e)=>handleInputChange(37, e.target.value)} placeholder="37" /></li>
+                    <li className="inner-li">the walls are made of local wood and are <input type="text" className="blank-input" value={getInputValue(38)} onChange={(e)=>handleInputChange(38, e.target.value)} placeholder="38" /> in shape</li>
+                    <li className="inner-li">Ceiling panels and <input type="text" className="blank-input" value={getInputValue(39)} onChange={(e)=>handleInputChange(39, e.target.value)} placeholder="39" /> on walls allow adjustment of acoustics</li>
                 </ul>
                 <h4>Evaluation</h4>
                 <ul>
-                    <li>Critics say the <input type="text" className="blank-input" value={getInputValue(40)} onChange={(e)=>handleInputChange(40, e.target.value)} placeholder="40" /> style is inappropriate</li>
+                    <li>Some critics say the <input type="text" className="blank-input" value={getInputValue(40)} onChange={(e)=>handleInputChange(40, e.target.value)} placeholder="40" /> style of the building is inappropriate</li>
                 </ul>
             </div>
           </div>

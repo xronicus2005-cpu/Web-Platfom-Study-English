@@ -18,20 +18,9 @@
     border: 1px solid #d1d5db;
 }
 
-.listening-light-theme .options-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    margin-bottom: 20px;
-}
 
-.listening-light-theme .opt-label {
-    background: white;
-    padding: 10px;
-    border: 1px solid #9ca3af;
-    text-align: center;
-    font-size: 14px;
-}
+
+
 
 .listening-light-theme .map-q-row {
     display: flex;

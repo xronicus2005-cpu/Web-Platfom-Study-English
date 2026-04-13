@@ -1,0 +1,23 @@
+.listening-light-theme .map-image-placeholder {
+    width: 500px;
+
+    background: #f0f4f8;
+    border: 2px dashed #9fb3c8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    color: #486581;
+    font-weight: bold;
+}
+
+.listening-light-theme .matching-container {
+    background: #fff;
+    padding: 20px;
+    border: 1px solid #d9e2ec;
+    border-radius: 12px;
+}
+
+
+
+

@@ -67,6 +67,58 @@ const courses = [
       { id: 4, title: "Test 4", code: "E15T4" },
     ],
     description: "Full IELTS listening simulation with 40 questions.",
+  },
+
+    {
+    id: 6,
+    title: "IELTS 16",
+    type: "Academic",
+    tests: [
+      { id: 1, title: "Test 1", code: "E16T1" },
+      { id: 2, title: "Test 2", code: "E16T2" },
+      { id: 3, title: "Test 3", code: "E16T3" },
+      { id: 4, title: "Test 4", code: "E16T4" },
+    ],
+    description: "Full IELTS listening simulation with 40 questions.",
+  },
+
+    {
+    id: 7,
+    title: "IELTS 17",
+    type: "Academic",
+    tests: [
+      { id: 1, title: "Test 1", code: "E17T1" },
+      { id: 2, title: "Test 2", code: "E17T2" },
+      { id: 3, title: "Test 3", code: "E17T3" },
+      { id: 4, title: "Test 4", code: "E17T4" },
+    ],
+    description: "Full IELTS listening simulation with 40 questions.",
+  },
+
+    {
+    id: 8,
+    title: "IELTS 18",
+    type: "Academic",
+    tests: [
+      { id: 1, title: "Test 1", code: "E18T1" },
+      { id: 2, title: "Test 2", code: "E18T2" },
+      { id: 3, title: "Test 3", code: "E18T3" },
+      { id: 4, title: "Test 4", code: "E18T4" },
+    ],
+    description: "Full IELTS listening simulation with 40 questions.",
+  },
+
+    {
+    id: 9,
+    title: "IELTS 19",
+    type: "Academic",
+    tests: [
+      { id: 1, title: "Test 1", code: "E19T1" },
+      { id: 2, title: "Test 2", code: "E19T2" },
+      { id: 3, title: "Test 3", code: "E19T3" },
+      { id: 4, title: "Test 4", code: "E19T4" },
+    ],
+    description: "Full IELTS listening simulation with 40 questions.",
   }
 ];
 

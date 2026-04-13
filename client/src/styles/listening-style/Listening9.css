@@ -43,20 +43,9 @@
     margin: 5px 0;
 }
 
-.listening-light-theme .options-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-}
 
-.listening-light-theme .opt-label {
-    background: white;
-    padding: 8px;
-    border: 1px solid var(--l-border);
-    border-radius: 6px;
-    font-size: 12px;
-    font-weight: 600;
-}
+
+
 
 .listening-light-theme .map-q-row {
     display: flex;

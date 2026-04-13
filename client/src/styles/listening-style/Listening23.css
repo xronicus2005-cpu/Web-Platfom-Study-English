@@ -1,0 +1,23 @@
+.listening-light-theme .matching-container {
+    background: #fdfdfd;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+
+
+
+
+.listening-light-theme .map-q-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px dashed #eee;
+}
+
+.listening-light-theme .blank-input.small {
+    width: 50px;
+    text-align: center;
+}

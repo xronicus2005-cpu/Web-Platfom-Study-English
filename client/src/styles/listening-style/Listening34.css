@@ -1,0 +1,15 @@
+.listening-light-theme .test-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+.listening-light-theme .test-table th, .listening-light-theme .test-table td {
+    border: 1px solid #cbd5e1;
+    padding: 12px;
+}
+.listening-light-theme .matching-container {
+    background: #f1f5f9;
+    padding: 20px;
+    border-radius: 8px;
+}
+

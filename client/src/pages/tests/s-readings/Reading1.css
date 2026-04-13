@@ -1,0 +1,239 @@
+/* Reading1.css */
+
+.reading-light-theme {
+  --l-bg: #f3f6f9;
+  --l-surface: #ffffff;
+  --l-primary: #6366f1;
+  --l-primary-light: #eef2ff;
+  --l-text-main: #1e293b;
+  --l-text-sub: #64748b;
+  --l-border: #e2e8f0;
+  
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  font-family: 'Inter', -apple-system, sans-serif;
+  color: var(--l-text-main);
+  background-color: var(--l-bg);
+  overflow: hidden; /* Header qolishi uchun */
+}
+
+.reading-light-theme .full-viewport-wrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ========================= */
+/* HEADER - FULL WIDTH */
+/* ========================= */
+
+.reading-light-theme .test-header {
+  width: 100%;
+  background: var(--l-surface);
+  border-bottom: 1px solid var(--l-border);
+  z-index: 1000;
+  padding: 10px 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+}
+
+.reading-light-theme .header-flex-container {
+  width: 98%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.reading-light-theme .timer-badge {
+  background: var(--l-primary);
+  color: white;
+  padding: 8px 20px;
+  border-radius: 10px;
+  font-weight: 800;
+  font-size: 16px;
+}
+
+/* Header ichidagi Passage switcher */
+.reading-light-theme .passage-navigation {
+  display: flex;
+  gap: 10px;
+}
+
+.reading-light-theme .part-link {
+  background: var(--l-primary-light);
+  border: 1px solid var(--l-border);
+  padding: 6px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  color: var(--l-primary);
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.2s;
+}
+
+.reading-light-theme .part-link.active {
+  background: var(--l-primary);
+  color: white;
+  border-color: var(--l-primary);
+}
+
+.reading-light-theme .finish-btn {
+  background: var(--l-primary);
+  color: white;
+  border: none;
+  padding: 10px 25px;
+  border-radius: 10px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* ========================= */
+/* MAIN LAYOUT (SPLIT SCREEN) */
+/* ========================= */
+
+.reading-light-theme .reading-layout {
+  flex: 1;
+  display: flex;
+  width: 100%;
+  overflow: hidden; /* Ichki skroll bo'lishi uchun */
+}
+
+.reading-light-theme .passage-container,
+.reading-light-theme .questions-container {
+  width: 50%;
+  height: 100%;
+  overflow-y: auto; /* Mustaqil skroll */
+  padding: 20px;
+}
+
+.reading-light-theme .passage-container {
+  border-right: 2px solid var(--l-border);
+  background: #f8fafc;
+}
+
+.reading-light-theme .paper-card {
+  background: var(--l-surface);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+  min-height: 100%;
+}
+
+/* ========================= */
+/* INSTRUCTIONS & TEXT STYLES */
+/* ========================= */
+
+.reading-light-theme .instructions-box {
+  background: var(--l-primary-light);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(99, 102, 241, 0.1);
+}
+
+.reading-light-theme .ins-header {
+  background: var(--l-primary);
+  color: white;
+  padding: 8px 15px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.reading-light-theme .ins-body {
+  padding: 12px 15px;
+  font-size: 12px;
+  color: #334155;
+}
+
+.reading-light-theme .section-title {
+  font-size: 22px;
+  color: var(--l-primary);
+  margin-bottom: 20px;
+}
+
+.reading-light-theme p, 
+.reading-light-theme li {
+  font-size: 12px; /* 12px so'ralgan shrift */
+  line-height: 1.8;
+  margin-bottom: 15px;
+  color: #334155;
+}
+
+.reading-light-theme .paragraph-block h3 {
+  color: var(--l-primary);
+  font-size: 16px;
+  margin: 20px 0 10px 0;
+}
+
+/* ========================= */
+/* INPUTS & QUESTIONS */
+/* ========================= */
+
+.reading-light-theme .question-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 12px;
+}
+
+.reading-light-theme .q-num {
+  font-weight: 800;
+  color: var(--l-primary);
+}
+
+.reading-light-theme .blank-input-sm {
+  width: 40px;
+  text-align: center;
+  border: 1px solid var(--l-border);
+  border-radius: 4px;
+  padding: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--l-primary);
+}
+
+.reading-light-theme .blank-input {
+  border: none;
+  border-bottom: 2px solid #cbd5e1;
+  background: var(--l-primary-light);
+  padding: 2px 8px;
+  width: 150px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* ========================= */
+/* HIGHLIGHT TOOLTIP */
+/* ========================= */
+
+.reading-light-theme .highlight-tooltip {
+  display: flex;
+  gap: 8px;
+  background: white;
+  padding: 6px 10px;
+  border-radius: 50px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  border: 1px solid #ddd;
+  z-index: 2000;
+}
+
+.reading-light-theme .h-btn {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid white;
+  cursor: pointer;
+}
+
+.reading-light-theme .h-btn.red { background: #ff4d4d !important; }
+.reading-light-theme .h-btn.yel { background: #ffd43b !important; }
+.reading-light-theme .h-btn.blu { background: #339af0 !important; }
+
+.reading-light-theme .highlighted-text {
+  border-radius: 3px;
+  padding: 1px 0;
+}
+
+.mt-30 { margin-top: 30px; }

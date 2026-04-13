@@ -1,0 +1,23 @@
+.listening-light-theme .test-section {
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333;
+}
+
+.listening-light-theme .matching-container {
+    background: #f1f5f9;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 15px;
+}
+
+
+
+
+.listening-light-theme .map-q-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #e2e8f0;
+}

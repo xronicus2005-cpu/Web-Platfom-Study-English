@@ -6,21 +6,9 @@
     border: 1px solid var(--l-border);
 }
 
-.listening-light-theme .options-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    margin-bottom: 20px;
-}
 
-.listening-light-theme .opt-label {
-    background: white;
-    padding: 10px;
-    border: 1px solid var(--l-border);
-    border-radius: 8px;
-    font-size: 13px;
-    font-weight: 600;
-}
+
+
 
 .listening-light-theme .map-q-row {
     display: flex;

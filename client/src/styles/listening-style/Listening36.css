@@ -1,0 +1,23 @@
+.listening-light-theme .test-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+.listening-light-theme .test-table th, .listening-light-theme .test-table td {
+    border: 1px solid #cbd5e1;
+    padding: 10px;
+    font-size: 0.9em;
+}
+.listening-light-theme .matching-container {
+    background: #f8fafc;
+    padding: 15px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+}
+.listening-light-theme .map-q-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #cbd5e1;
+}

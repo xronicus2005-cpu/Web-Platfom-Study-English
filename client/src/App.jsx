@@ -35,6 +35,26 @@ import Listening17 from "./pages/tests/listenings/Listening17"
 import Listening18 from "./pages/tests/listenings/Listening18"
 import Listening19 from "./pages/tests/listenings/Listening19"
 import Listening20 from "./pages/tests/listenings/Listening20"
+import Listening21 from "./pages/tests/listenings/Listening21"
+import Listening22 from "./pages/tests/listenings/Listening22"
+import Listening23 from "./pages/tests/listenings/Listening23"
+import Listening24 from "./pages/tests/listenings/Listening24"
+import Listening25 from "./pages/tests/listenings/Listening25"
+import Listening26 from "./pages/tests/listenings/Listening26"
+import Listening27 from "./pages/tests/listenings/Listening27"
+import Listening28 from "./pages/tests/listenings/Listening28"
+import Listening29 from "./pages/tests/listenings/Listening29"
+import Listening30 from "./pages/tests/listenings/Listening30"
+import Listening31 from "./pages/tests/listenings/Listening31"
+import Listening32 from "./pages/tests/listenings/Listening32"
+import Listening33 from "./pages/tests/listenings/Listening33"
+import Listening34 from "./pages/tests/listenings/Listening34"
+import Listening35 from "./pages/tests/listenings/Listening35"
+import Listening36 from "./pages/tests/listenings/Listening36"
+
+
+//readings
+import Reading1 from "./pages/tests/s-readings/Reading1"
 
 import { ToastContainer } from "react-toastify"
 
@@ -73,6 +93,25 @@ function App() {
         <Route path="/profile/listening/5/2" element={<Listening18/>}/>
         <Route path="/profile/listening/5/3" element={<Listening19/>}/>
         <Route path="/profile/listening/5/4" element={<Listening20/>}/>
+        <Route path="/profile/listening/6/1" element={<Listening21/>}/>
+        <Route path="/profile/listening/6/2" element={<Listening22/>}/>
+        <Route path="/profile/listening/6/3" element={<Listening23/>}/>
+        <Route path="/profile/listening/6/4" element={<Listening24/>}/>
+        <Route path="/profile/listening/7/1" element={<Listening25/>}/>
+        <Route path="/profile/listening/7/2" element={<Listening26/>}/>
+        <Route path="/profile/listening/7/3" element={<Listening27/>}/>
+        <Route path="/profile/listening/7/4" element={<Listening28/>}/>
+        <Route path="/profile/listening/8/1" element={<Listening29/>}/>
+        <Route path="/profile/listening/8/2" element={<Listening30/>}/>
+        <Route path="/profile/listening/8/3" element={<Listening31/>}/>
+        <Route path="/profile/listening/8/4" element={<Listening32/>}/>
+        <Route path="/profile/listening/9/1" element={<Listening33/>}/>
+        <Route path="/profile/listening/9/2" element={<Listening34/>}/>
+        <Route path="/profile/listening/9/3" element={<Listening35/>}/>
+        <Route path="/profile/listening/9/4" element={<Listening36/>}/>
+
+        <Route path="/profile/reading/1" element={<Reading1/>}/>
+
 
         <Route path="/profile" element={<Profile/>}>
 

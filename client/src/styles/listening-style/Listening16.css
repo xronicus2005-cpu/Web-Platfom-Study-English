@@ -1,7 +1,5 @@
 /* Styling for full grids in matching */
-.listening-light-theme .options-grid.full {
-    grid-template-columns: repeat(3, 1fr);
-}
+
 
 .listening-light-theme .matching-container {
     background: #fdfcfb;

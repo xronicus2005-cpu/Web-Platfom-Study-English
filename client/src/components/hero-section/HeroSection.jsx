@@ -9,7 +9,6 @@ import PersonIcon from "@mui/icons-material/Person";
 import SettingsIcon from "@mui/icons-material/Settings";
 import LogoutIcon from "@mui/icons-material/Logout";
 
-import logo from "../../assets/Logo.png"
 
 // Rasmlarni o'zingni manzilingdan import qilamiz
 import photo1 from "../../assets/photo3.png";
@@ -122,10 +121,10 @@ const HeroSection = () => {
       {/* DOTS: Slide ko'rsatkichlari */}
       <div className="hero-dots">
         {slides.map((_, i) => (
-          <div 
-            key={i} 
-            className={`dot ${i === index ? "active" : ""}`} 
-            onClick={() => setIndex(i)} 
+          <div
+            key={i}
+            className={`dot ${i === index ? "active" : ""}`}
+            onClick={() => setIndex(i)}
           />
         ))}
       </div>

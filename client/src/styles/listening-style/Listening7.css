@@ -45,22 +45,7 @@
     margin: 5px 0;
 }
 
-.listening-light-theme .options-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 10px;
-    margin-bottom: 20px;
-}
 
-.listening-light-theme .opt-label {
-    background: white;
-    padding: 10px;
-    border: 1px solid var(--l-border);
-    border-radius: 8px;
-    font-size: 12px;
-    text-align: center;
-    font-weight: 600;
-}
 
 .listening-light-theme .blank-input.small {
     width: 45px;

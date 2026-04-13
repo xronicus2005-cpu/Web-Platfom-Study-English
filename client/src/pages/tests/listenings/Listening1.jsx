@@ -10,7 +10,7 @@ const Listening1 = () => {
   const [answers, setAnswers] = useState({});
   const [isFinished, setIsFinished] = useState(false);
   const [highlightPopup, setHighlightPopup] = useState({ visible: false, x: 0, y: 0, range: null });
-  
+
   const audioRef = useRef(null);
 
   const correctAnswers = {
@@ -25,13 +25,13 @@ const Listening1 = () => {
 
   const title = "E11T1"
 
-  // Logic to sync timer with Audio Duration
-  const handleMetadata = () => {
-    if (audioRef.current) {
-      // Sets the countdown to exactly the length of the audio file
-      setTime(Math.floor(audioRef.current.duration));
-    }
-  };
+    // Logic to sync timer with Audio Duration
+    const handleMetadata = () => {
+      if (audioRef.current) {
+        // Sets the countdown to exactly the length of the audio file
+        setTime(Math.floor(audioRef.current.duration));
+      }
+    };
 
   useEffect(() => {
     if (isFinished || time <= 0) return;
@@ -77,7 +77,7 @@ const Listening1 = () => {
       const span = document.createElement("span");
       span.style.backgroundColor = color;
       span.className = "highlighted-text";
-      try { highlightPopup.range.surroundContents(span); } 
+      try { highlightPopup.range.surroundContents(span); }
       catch (e) { console.warn("Highlight error"); }
     }
     setHighlightPopup({ visible: false, x: 0, y: 0, range: null });
@@ -102,6 +102,9 @@ const Listening1 = () => {
               <div className="ins-header">Questions 1-10</div>
               <div className="ins-body">Complete the notes below. Write <strong>ONE WORD AND/OR A NUMBER</strong> for each answer.</div>
             </div>
+            <div>
+
+            </div>
             <h2 className="section-title">HIRING A PUBLIC ROOM</h2>
             <div className="notes-container">
                 <p>Example: the Main Hall — seats 200</p>
@@ -121,12 +124,15 @@ const Listening1 = () => {
                 <ul>
                     <li>The building is no smoking</li>
                     <li>The band should use the <input type="text" className="blank-input" value={getInputValue(7)} onChange={(e)=>handleInputChange(7, e.target.value)} placeholder="7" /> door at the back</li>
+                    <li>Don't touch the system that controls the volume</li>
+                    <li>For microphones, contact the caretaker</li>
                 </ul>
                 <h4>After the event</h4>
                 <ul>
                     <li>Need to know the <input type="text" className="blank-input" value={getInputValue(8)} onChange={(e)=>handleInputChange(8, e.target.value)} placeholder="8" /> for the cleaning cupboard</li>
                     <li>The <input type="text" className="blank-input" value={getInputValue(9)} onChange={(e)=>handleInputChange(9, e.target.value)} placeholder="9" /> must be washed and rubbish placed in black bags</li>
                     <li>All <input type="text" className="blank-input" value={getInputValue(10)} onChange={(e)=>handleInputChange(10, e.target.value)} placeholder="10" /> must be taken down</li>
+                    <li>Chairs and tables must be piled up</li>
                 </ul>
             </div>
           </div>
@@ -139,25 +145,31 @@ const Listening1 = () => {
               <div className="ins-body">Write <strong>ONE WORD</strong> for each answer.</div>
             </div>
             <h2 className="section-title">Fiddy Working Heritage Farm</h2>
-            <ul>
+            <ul className="section-one-word">
+                <p>Advice about visiting the farm</p>
+                <h4>Visitors should</h4>
                 <li>take care not to harm any <input type="text" className="blank-input" value={getInputValue(11)} onChange={(e)=>handleInputChange(11, e.target.value)} placeholder="11" /></li>
                 <li>not touch any <input type="text" className="blank-input" value={getInputValue(12)} onChange={(e)=>handleInputChange(12, e.target.value)} placeholder="12" /></li>
                 <li>wear <input type="text" className="blank-input" value={getInputValue(13)} onChange={(e)=>handleInputChange(13, e.target.value)} placeholder="13" /></li>
-                <li>not bring <input type="text" className="blank-input" value={getInputValue(14)} onChange={(e)=>handleInputChange(14, e.target.value)} placeholder="14" /> into the farm</li>
+                <li>not bring <input type="text" className="blank-input" value={getInputValue(14)} onChange={(e)=>handleInputChange(14, e.target.value)} placeholder="14" /> into the farm,  with certain exceptions</li>
             </ul>
             <div className="instructions-box" style={{marginTop: '30px'}}>
               <div className="ins-header">Questions 15-20</div>
               <div className="ins-body">Label the map below. Choose the correct letter, <strong>A-I</strong>.</div>
             </div>
-            <img className="map-placeholder" src={photo} alt="photo"/>
-            <div className="map-questions">
-                {[15,16,17,18,19,20].map(q => (
-                    <div key={q} className="map-q-row">
-                        <span>{q}. {getMapLabel(q)}</span>
-                        <input type="text" className="blank-input small" value={getInputValue(q)} onChange={(e)=>handleInputChange(q, e.target.value)} maxLength="1" />
-                    </div>
-                ))}
+
+            <div className="map-question-type">
+                <img className="map-placeholder" src={photo} alt="photo"/>
+                <div className="map-questions">
+                    {[15,16,17,18,19,20].map(q => (
+                        <div key={q} className="map-q-row">
+                            <span>{q}. {getMapLabel(q)}</span>
+                            <input type="text" className="blank-input small" value={getInputValue(q)} onChange={(e)=>handleInputChange(q, e.target.value)} maxLength="1" />
+                        </div>
+                    ))}
+                </div>
             </div>
+
           </div>
         );
       case 3:
@@ -243,30 +255,42 @@ const Listening1 = () => {
             <div className="notes-container">
                 <h4>Biodiversity hotspots</h4>
                 <ul>
+                    <li>areas containing many different species</li>
                     <li>important for locating targets for <input type="text" className="blank-input" value={getInputValue(31)} onChange={(e)=>handleInputChange(31, e.target.value)} placeholder="31" /></li>
+                    <li>at first only identified on land</li>
                 </ul>
                 <h4>Boris Worm, 2005</h4>
                 <ul>
-                    <li>found hotspots were not always rich in <input type="text" className="blank-input" value={getInputValue(32)} onChange={(e)=>handleInputChange(32, e.target.value)} placeholder="32" /></li>
-                    <li>had higher temperatures at the <input type="text" className="blank-input" value={getInputValue(33)} onChange={(e)=>handleInputChange(33, e.target.value)} placeholder="33" /></li>
-                    <li>had sufficient <input type="text" className="blank-input" value={getInputValue(34)} onChange={(e)=>handleInputChange(34, e.target.value)} placeholder="34" /> in the water</li>
+                    <li>identified hotspots for large ocean predators, e.g. sharks</li>
+                    <li>found that ocean hotspots: </li>
+                    <li className="inner-li">were not always rich in <input type="text" className="blank-input" value={getInputValue(32)} onChange={(e)=>handleInputChange(32, e.target.value)} placeholder="32" /></li>
+                    <li className="inner-li">had higher temperatures at the <input type="text" className="blank-input" value={getInputValue(33)} onChange={(e)=>handleInputChange(33, e.target.value)} placeholder="33" /></li>
+                    <li className="inner-li">had sufficient <input type="text" className="blank-input" value={getInputValue(34)} onChange={(e)=>handleInputChange(34, e.target.value)} placeholder="34" /> in the water</li>
                 </ul>
                 <h4>Lisa Ballance, 2007</h4>
                 <ul>
                     <li>looked for hotspots for marine <input type="text" className="blank-input" value={getInputValue(35)} onChange={(e)=>handleInputChange(35, e.target.value)} placeholder="35" /></li>
+                    <li>found these were all located where ocean currents meet</li>
                 </ul>
                 <h4>Census of Marine Life</h4>
                 <ul>
-                    <li>found species living under the <input type="text" className="blank-input" value={getInputValue(36)} onChange={(e)=>handleInputChange(36, e.target.value)} placeholder="36" /></li>
+                    <li>found new ocean species living:</li>
+                    <li className="inner-li">under the <input type="text" className="blank-input" value={getInputValue(36)} onChange={(e)=>handleInputChange(36, e.target.value)} placeholder="36" /></li>
+                    <li className="inner-li">near volcanoes on the ocean floor</li>
                 </ul>
                 <h4>Global Marine Species Assessment</h4>
                 <ul>
-                    <li>rate of <input type="text" className="blank-input" value={getInputValue(37)} onChange={(e)=>handleInputChange(37, e.target.value)} placeholder="37" /></li>
-                    <li>Aim: make a distribution <input type="text" className="blank-input" value={getInputValue(38)} onChange={(e)=>handleInputChange(38, e.target.value)} placeholder="38" /> for each one</li>
+                    <li>want to list endangered ocean species, considering:</li>
+                    <li className="inner-li">population size</li>
+                    <li className="inner-li">geographical distribution</li>
+                    <li className="inner-li">rate of <input type="text" className="blank-input" value={getInputValue(37)} onChange={(e)=>handleInputChange(37, e.target.value)} placeholder="37" /></li>
+                    <li>Aim: to assess 20,000 species and make a distribution <input type="text" className="blank-input" value={getInputValue(38)} onChange={(e)=>handleInputChange(38, e.target.value)} placeholder="38" /> for each one</li>
                 </ul>
-                <h4>Recommendations</h4>
+                <h4>Recommendations to retain ocean biodiversity</h4>
                 <ul>
+                    <li>increase the number of ocean reserves</li>
                     <li>establish <input type="text" className="blank-input" value={getInputValue(39)} onChange={(e)=>handleInputChange(39, e.target.value)} placeholder="39" /> corridors</li>
+                    <li>reduce fishing quotas</li>
                     <li>catch fish only for the purpose of <input type="text" className="blank-input" value={getInputValue(40)} onChange={(e)=>handleInputChange(40, e.target.value)} placeholder="40" /></li>
                 </ul>
             </div>
@@ -279,6 +303,8 @@ const Listening1 = () => {
   return (
     <div className="listening-light-theme" onMouseUp={handleMouseUp}>
       <div className="full-viewport-wrapper">
+
+        {/**Higliht function */}
         {highlightPopup.visible && (
           <div className="highlight-tooltip" style={{ top: `${highlightPopup.y}px`, left: `${highlightPopup.x}px`, position: 'absolute' }}>
             <button className="h-btn red" onClick={() => applyHighlight("#ff4d4d")}></button>
@@ -291,12 +317,12 @@ const Listening1 = () => {
             <div className="timer-section">
               <div className="timer-badge">⏱ {formatTime()}</div>
             </div>
-            <audio 
+            <audio
               ref={audioRef}
               onLoadedMetadata={handleMetadata} // Syncs timer to duration
-              autoPlay 
-              className="custom-compact-player" 
-              controls  
+              autoPlay
+              className="custom-compact-player"
+              controls
               src={fullAudio}>
             </audio>
             <button className="finish-btn" onClick={() => setIsFinished(true)}>Finish Test</button>

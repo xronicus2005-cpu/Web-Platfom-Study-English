@@ -1,0 +1,23 @@
+.listening-light-theme .matching-container {
+    background: #fdfcfb;
+    padding: 20px;
+    border: 1px solid #e2e8f0;
+    border-radius: 8px;
+}
+
+
+
+
+
+.listening-light-theme .flowchart-container {
+    text-align: center;
+    background: #f8fafc;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.listening-light-theme .map-q-row {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+}
